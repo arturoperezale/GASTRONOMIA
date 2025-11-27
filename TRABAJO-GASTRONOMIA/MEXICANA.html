@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comida Mexicana</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <style>
+    body { font-family: "Karma", sans-serif; background:#f7f7f7; margin:0; padding:0; }
+
+    /* Encabezado estilo bandera mexicana */
+    .mexican-header {
+      background: linear-gradient(to right, #006847 0%, #ffffff 50%, #CE1126 100%);
+      color: #000;
+      padding: 14px 18px;
+      margin: 0;
+    }
+    .mexican-header h2 { margin:0; text-align:center; }
+
+    .main-grid {
+      display: flex;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 18px auto 50px;
+      align-items: flex-start;
+      padding: 0 12px;
+    }
+
+    .left-col { flex: 2; min-width: 280px; }
+    .right-col { flex: 1; min-width: 220px; }
+
+    .main-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 14px;
+      background: #fff;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+
+    .compact-table thead th {
+      padding: 8px 10px;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    .compact-table tbody td {
+      padding: 6px 8px;
+      font-size: 13px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .compact-table tbody tr:nth-child(even) td { background:#fbfbfb; }
+
+    .img-menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .img-menu a img {
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #CE1126;
+    }
+
+    .section-title {
+      margin: 10px 0 8px;
+      font-size: 18px;
+      color: #006847;
+    }
+
+    .description-card {
+      background: #fff;
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+      margin-bottom: 12px;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 900px) {
+      .main-grid { flex-direction: column; }
+      .main-image { height: 220px; }
+      .img-menu a img { height: 90px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="w3-container mexican-header w3-margin-bottom">
+  <h1>Comida Mexicana</h1>
+  <a href="index.html"><span class="w3-left w3-xxlarge">«</span></a>
+  <a href="COREANA.html"><span class="w3-right w3-xxlarge">»</span></a>
+</div>
+
+<div class="w3-row-padding">
+
+  <div class="main-grid">
+
+    <div class="left-col">
+
+      <img src="mexicana.jpg" alt="Comida Mexicana" class="main-image">
+
+      <div>
+        <div class="section-title">Platillos típicos</div>
+        <table class="compact-table">
+          <thead style="background:#006847; color:#fff;">
+            <tr>
+              <th style="width:30%;">Platillo</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tacos al Pastor</td>
+              <td>Cerdo adobado con piña, cebolla y cilantro.</td>
+            </tr>
+            <tr>
+              <td>Enchiladas Verdes</td>
+              <td>Tortillas rellenas bañadas en salsa verde.</td>
+            </tr>
+            <tr>
+              <td>Chiles en Nogada</td>
+              <td>Chile poblano con picadillo y salsa de nuez.</td>
+            </tr>
+            <tr>
+              <td>Pozole</td>
+              <td>Caldo de maíz con carne y acompañamientos.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div>
+        <div class="section-title">Ingredientes característicos</div>
+        <table class="compact-table">
+          <thead style="background:#CE1126; color:#fff;">
+            <tr>
+              <th style="width:30%;">Ingrediente</th>
+              <th>Uso principal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Maíz</td>
+              <td>Tortillas, pozole y tamales.</td>
+            </tr>
+            <tr>
+              <td>Chile</td>
+              <td>Salsas, moles y guisos.</td>
+            </tr>
+            <tr>
+              <td>Frijol</td>
+              <td>Guarnición tradicional.</td>
+            </tr>
+            <tr>
+              <td>Epazote</td>
+              <td>Aromatizante en sopas y frijoles.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div>
+        <div class="section-title">Postres populares</div>
+        <table class="compact-table">
+          <thead style="background:#006847; color:#fff;">
+            <tr>
+              <th style="width:30%;">Postre</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Flan Napolitano</td>
+              <td>Flan cremoso con caramelo.</td>
+            </tr>
+            <tr>
+              <td>Churros</td>
+              <td>Masa frita con azúcar y canela.</td>
+            </tr>
+            <tr>
+              <td>Arroz con Leche</td>
+              <td>Arroz dulce con canela.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <aside class="right-col">
+
+      <div class="description-card">
+        <h3 style="margin:0 0 8px; color:#CE1126;">Sobre la cocina mexicana</h3>
+        <p style="margin:0;">
+          La cocina mexicana destaca por su variedad de sabores intensos, combinaciones tradicionales
+          y una fuerte identidad cultural basada en ingredientes como el maíz, los chiles y las hierbas
+          aromáticas. Es una gastronomía reconocida mundialmente por su riqueza y tradición.
+        </p>
+      </div>
+
+      <div class="section-title" style="margin-top:6px;">Galería</div>
+      <div class="img-menu">
+        <a href="mex1.jpg" target="_blank"><img src="mex1.jpg" alt="Plato Mexicano 1"></a>
+        <a href="mex2.jpg" target="_blank"><img src="mex2.jpg" alt="Plato Mexicano 2"></a>
+        <a href="mex3.jpg" target="_blank"><img src="mex3.jpg" alt="Plato Mexicano 3"></a>
+        <a href="mex4.jpg" target="_blank"><img src="MEXICANA.jpg" alt="Plato Mexicano 4"></a>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <script>
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

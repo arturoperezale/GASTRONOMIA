@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comida China</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+
+  <style>
+    body { 
+      font-family: "Karma", sans-serif; 
+      background:#f7f7f7; 
+      margin:0; 
+      padding:0; 
+    }
+
+    .china-header {
+      background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      padding: 120px 40px;
+      text-align: center;
+
+      border-top: 25px solid black;
+      border-bottom: 25px solid black;
+
+      color: white;
+      position: relative;
+    }
+
+    .china-header h1 { 
+      margin: 0; 
+      font-size: 55px;
+      font-weight: bold;
+      text-shadow: 0 0 6px black;
+    }
+
+    .arrow-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.85);
+      padding: 14px 20px;
+      border-radius: 50%;
+      font-size: 30px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      border: 2px solid black;
+      transition: 0.2s;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .arrow-btn:hover {
+      background: white;
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .arrow-left { left: 20px; }
+    .arrow-right { right: 20px; }
+
+    .main-grid {
+      display: flex;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 18px auto 50px;
+      align-items: flex-start;
+      padding: 0 12px;
+    }
+
+    .left-col { flex: 2; min-width: 280px; }
+    .right-col { flex: 1; min-width: 220px; }
+
+    .main-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+      margin-bottom: 12px;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .section-title {
+      margin: 10px 0 8px;
+      font-size: 18px;
+      color: #B71C1C;
+    }
+
+    .compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 14px;
+      background: #fff;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+
+    .compact-table thead th {
+      padding: 8px 10px;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    .compact-table tbody td {
+      padding: 6px 8px;
+      font-size: 13px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      vertical-align: top;
+    }
+
+    .compact-table tbody tr:nth-child(even) td { background:#fbfbfb; }
+
+    .img-menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .img-menu a img {
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #B71C1C;
+      display: block;
+    }
+
+    .description-card {
+      background: #fff;
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+      margin-bottom: 12px;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 900px) {
+      .main-grid { flex-direction: column; }
+      .main-image { height: 220px; }
+      .img-menu a img { height: 90px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="china-header w3-margin-bottom">
+  
+  <a href="index.html"><span class="w3-left w3-xxlarge">«</span></a>
+  <a href="ESTADOUNIDENSE.html"><span class="w3-right w3-xxlarge">»</span></a>
+
+  <h1>Comida China</h1>
+</div>
+
+<div class="w3-row-padding">
+
+  <div class="main-grid">
+
+    <div class="left-col">
+
+      <img src="CHINA.jpg" alt="Comida China" class="main-image">
+
+      <div>
+        <div class="section-title">Platillos típicos</div>
+
+        <table class="compact-table">
+          <thead style="background:#B71C1C; color:#fff;">
+            <tr>
+              <th style="width:30%;">Platillo</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dim Sum</td>
+              <td>Pequeñas porciones de comida servidas en canastas de bambú, típicas del sur de China.</td>
+            </tr>
+            <tr>
+              <td>Chow Mein</td>
+              <td>Fideos fritos mezclados con verduras y carne.</td>
+            </tr>
+            <tr>
+              <td>Mapo Tofu</td>
+              <td>Tofu suave en salsa picante con carne molida.</td>
+            </tr>
+            <tr>
+              <td>Pato Pekín</td>
+              <td>Pato asado servido con tortillas finas, pepino y salsa hoisin.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div>
+        <div class="section-title">Ingredientes característicos</div>
+
+        <table class="compact-table">
+          <thead style="background:black; color:#fff;">
+            <tr>
+              <th style="width:30%;">Ingrediente</th>
+              <th>Uso principal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Salsa de soya</td>
+              <td>Condimento base usado en marinados y guisos.</td>
+            </tr>
+            <tr>
+              <td>Jengibre</td>
+              <td>Aporta frescura y aroma en sopas y carnes.</td>
+            </tr>
+            <tr>
+              <td>Tofu</td>
+              <td>Proteína vegetal común en sopas y platillos salteados.</td>
+            </tr>
+            <tr>
+              <td>Fideos de arroz</td>
+              <td>Base de sopas y platillos como Chow Fun.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div>
+        <div class="section-title">Postres populares</div>
+
+        <table class="compact-table">
+          <thead style="background:#B71C1C; color:#fff;">
+            <tr>
+              <th style="width:30%;">Postre</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tanghulu</td>
+              <td>Frutas caramelizadas en un palillo, típicas de invierno.</td>
+            </tr>
+            <tr>
+              <td>Baozi dulce</td>
+              <td>Bollos rellenos de pasta dulce de frijol rojo.</td>
+            </tr>
+            <tr>
+              <td>Pastel de luna</td>
+              <td>Pan dulce tradicional del Festival de Medio Otoño.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <aside class="right-col">
+
+      <div class="description-card">
+        <h3 style="margin:0 0 8px; color:#B71C1C;">Sobre la cocina china</h3>
+        <p style="margin:0;">
+          La gastronomía china es una de las más antiguas del mundo, caracterizada por 
+          el equilibrio entre colores, aromas y sabores. Sus métodos de cocción incluyen 
+          salteado, vapor y fritura rápida, dando origen a platillos emblemáticos en todo el mundo.
+        </p>
+      </div>
+
+      <div class="section-title">Galería</div>
+
+      <div class="img-menu">
+        <a href="china1.jpg" target="_blank"><img src="china1.jpg"></a>
+        <a href="china2.jpg" target="_blank"><img src="china2.jpeg"></a>
+        <a href="china3.jpg" target="_blank"><img src="china3.jpg"></a>
+        <a href="china4.jpg" target="_blank"><img src="china4.jpg"></a>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <script>
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

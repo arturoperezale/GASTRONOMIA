@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>American Classic Menu</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: #f2f2f2;
+        text-align: center;
+    }
+
+    /* HEADER con bandera realista */
+    .header {
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg');
+        background-size: cover;
+        background-position: center;
+        padding: 70px 20px;
+        position: relative;
+        border-bottom: 6px solid #3c3b6e;
+    }
+
+    .header h1 {
+        color: white;
+        font-size: 48px;
+        letter-spacing: 3px;
+        text-shadow: 4px 4px 10px rgba(0,0,0,0.55);
+        font-weight: 900;
+        margin-bottom: 10px;
+        backdrop-filter: brightness(0.8);
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 12px;
+    }
+
+    /* BOTÓN REGRESAR */
+    .back-btn {
+        margin-top: 15px;
+        background: #3c3b6e;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 12px;
+        border: 3px solid #b22234;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .back-btn:hover {
+        background: #b22234;
+        border-color: #3c3b6e;
+    }
+
+    .menu-container {
+        max-width: 900px;
+        margin: auto;
+        padding: 30px;
+    }
+
+    .section-title {
+        font-size: 38px;
+        color: #b22234;
+        margin-top: 40px;
+        font-weight: bold;
+        border-bottom: 3px solid #3c3b6e;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    .dish {
+        background: white;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 25px 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        text-align: left;
+        display: flex;
+        gap: 20px;
+    }
+
+    .dish img {
+        width: 180px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 15px;
+        border: 3px solid #b22234;
+    }
+
+    .dish h3 {
+        font-size: 28px;
+        color: #3c3b6e;
+        margin: 0;
+    }
+
+    .dish p {
+        font-size: 17px;
+        color: #333;
+    }
+
+    footer {
+        background: #3c3b6e;
+        color: white;
+        padding: 20px;
+        margin-top: 40px;
+        font-size: 14px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>AMERICAN CLASSIC MENU</h1>
+</div>
+
+<div class="menu-container">
+
+    <h2 class="section-title">Entrada</h2>
+    <div class="dish">
+        <img src="usaentrada.jpeg" alt="Buffalo Wings">
+        <div>
+            <h3>Buffalo Wings</h3>
+            <p>
+                Alitas crujientes bañadas en salsa picante estilo Buffalo, 
+                acompañadas de aderezo ranch y bastones de apio.
+            </p>
+        </div>
+    </div>
+
+    <h2 class="section-title">Plato Fuerte</h2>
+    <div class="dish">
+        <img src="usafuerte.jpeg" alt="BBQ Ribs">
+        <div>
+            <h3>BBQ Pork Ribs</h3>
+            <p>
+                Costillas suaves con salsa BBQ ahumada, más puré de papa y elote dulce a la mantequilla.
+            </p>
+        </div>
+    </div>
+
+    <h2 class="section-title">Postre</h2>
+    <div class="dish">
+        <img src="postreusa.jpg" alt="Apple Pie">
+        <div>
+            <h3>American Apple Pie</h3>
+            <p>
+                Tarta clásica de manzana con especias y helado de vainilla.  
+                El postre más icónico de EE.UU.
+            </p>
+        </div>
+    </div>
+
+       <a class="btn-return" href="index.html">← Regresar</a>
+
+</div>
+
+</body>
+</html>

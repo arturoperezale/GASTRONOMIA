@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comida Estadounidense</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+  }
+
+  .usa-header {
+    background-image: url('https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+    font-size: 55px;
+    font-weight: bold;
+    text-shadow: 3px 3px 8px black;
+    position: relative;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    text-shadow: 3px 3px 8px black;
+  }
+  .arrow-left { left: 20px; }
+  .arrow-right { right: 20px; }
+
+  .main-grid {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    gap: 20px;
+    padding: 25px;
+  }
+
+  .left-col { padding-right: 15px; }
+
+  .main-image {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 25px;
+  }
+
+  .section-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    color: #1e3a8a;
+  }
+
+  .compact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    background: white;
+  }
+
+  .compact-table th,
+  .compact-table td {
+    border: 1px solid #000;
+    padding: 10px;
+    font-size: 17px;
+  }
+
+  .right-col .description-card {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 6px solid #1e3a8a;
+  }
+
+  .img-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .img-menu img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+</style>
+
+</head>
+<body>
+
+<header class="usa-header">
+  Comida Estadounidense
+
+  <a href="index.html"><div class="arrow arrow-left">&#10094;</div></a>
+</header>
+
+<div class="main-grid">
+
+  <div class="left-col">
+
+    <img src="ESTADOUNIDENSE.jpg" alt="Comida Estadounidense" class="main-image">
+
+    <div>
+      <div class="section-title">Platillos típicos</div>
+
+      <table class="compact-table">
+        <thead style="background:#1e3a8a; color:#fff;">
+          <tr>
+            <th style="width:30%;">Platillo</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hamburguesa</td>
+            <td>Platillo icónico estadounidense preparado con carne de res, queso y vegetales.</td>
+          </tr>
+          <tr>
+            <td>Hot Dogs</td>
+            <td>Salchicha en pan, muy popular en estadios y ferias nacionales.</td>
+          </tr>
+          <tr>
+            <td>BBQ</td>
+            <td>Carne ahumada con salsa barbacoa, especialmente famosa en Texas.</td>
+          </tr>
+          <tr>
+            <td>Mac & Cheese</td>
+            <td>Pasta bañada en salsa cremosa de queso cheddar.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <div class="section-title">Ingredientes característicos</div>
+
+      <table class="compact-table">
+        <thead style="background:black; color:#fff;">
+          <tr>
+            <th style="width:30%;">Ingrediente</th>
+            <th>Uso principal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Carne de Res</td>
+            <td>Base de hamburguesas, asados y parrilladas.</td>
+          </tr>
+          <tr>
+            <td>Queso Cheddar</td>
+            <td>Utilizado en Mac & Cheese, hamburguesas y sándwiches.</td>
+          </tr>
+          <tr>
+            <td>Pancetta/Bacon</td>
+            <td>Acompaña desayunos, hamburguesas y sándwiches.</td>
+          </tr>
+          <tr>
+            <td>Salsa BBQ</td>
+            <td>Clave para costillas, pollo y cortes ahumados.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <div class="section-title">Postres populares</div>
+
+      <table class="compact-table">
+        <thead style="background:#1e3a8a; color:#fff;">
+          <tr>
+            <th style="width:30%;">Postre</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Apple Pie</td>
+            <td>Pastel de manzana clásico, símbolo cultural del país.</td>
+          </tr>
+          <tr>
+            <td>Cheesecake</td>
+            <td>Pastel de queso cremoso con base de galleta.</td>
+          </tr>
+          <tr>
+            <td>Brownies</td>
+            <td>Pastelito de chocolate denso y suave.</td>
+          </tr>
+          <tr>
+            <td>Donas</td>
+            <td>Icónicas rosquillas glaseadas, famosas por su variedad.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+
+  <aside class="right-col">
+
+    <div class="description-card">
+      <h3 style="margin:0 0 8px; color:#1e3a8a;">Sobre la cocina estadounidense</h3>
+      <p style="margin:0;">
+        La gastronomía estadounidense es una mezcla de culturas e influencias migratorias.
+        Sus platillos destacan por ser abundantes, prácticos y mundialmente populares.
+      </p>
+    </div>
+
+    <div class="section-title">Galería</div>
+
+    <div class="img-menu">
+      <a href="usa1.jpg" target="_blank"><img src="usa1.jpeg"></a>
+      <a href="usa2.jpg" target="_blank"><img src="usa2.jpg"></a>
+      <a href="usa3.jpg" target="_blank"><img src="usa3.jpg"></a>
+      <a href="usa4.jpg" target="_blank"><img src="usa4.png"></a>
+    </div>
+
+  </aside>
+
+</div>
+
+<script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+</script>
+
+</body>
+</html>

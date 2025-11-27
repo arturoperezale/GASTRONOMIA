@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {
+  font-family: "Karma", sans-serif
+}
+.w3-bar-block .w3-bar-item {
+  padding:20px
+}
+
+.food-img {
+  width: 100%;
+  height: 250px; 
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.btn-container {
+  margin-top: 12px;
+}
+
+.custom-btn {
+  display: block;
+  width: 90%;
+  margin: 6px auto;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 17px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-about {
+  background: #1a73e8;
+}
+
+.btn-menu {
+  background: #0b8043;
+}
+
+.custom-btn:hover {
+  opacity: 0.8;
+}
+
+    @media (max-width: 900px) {
+      .main-grid { flex-direction: column; }
+      .main-image { height: 220px; }
+      .img-menu a img { height: 90px; }
+    }
+</style>
+</head>
+<body>
+
+<nav 
+  class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" 
+  style="display:none;z-index:2;width:40%;min-width:300px" 
+  id="mySidebar">
+
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">
+    Cerrar menú
+  </a>
+
+  <a href="contactos.html" onclick="w3_close()" class="w3-bar-item w3-button">
+    Contactos
+  </a>
+</nav>
+
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-center w3-padding-16">TIPO DE PLATILLOS</div>
+  </div>
+</div>
+
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <div class="w3-row-padding w3-padding-16 w3-center">
+
+    <div class="w3-third">
+      <img src="ITALIANA.jpeg" class="food-img">
+      <h3>Comida Italiana</h3>
+      <p>Sabores tradicionales con pasta, pizza y especias mediterráneas.</p>
+
+      <div class="btn-container">
+        <a class="custom-btn btn-about" href="ITALIANA.html">Sobre esto</a>
+        <a class="custom-btn btn-menu" href="MENU-ITALIANO.html">Menú de 3 tiempos</a>
+      </div>
+    </div>
+
+    <div class="w3-third">
+      <img src="MEXICANA.jpg" class="food-img">
+      <h3>Comida Mexicana</h3>
+      <p>Platillos llenos de color, picante y tradición cultural.</p>
+
+      <div class="btn-container">
+        <a class="custom-btn btn-about" href="MEXICANA.html">Sobre esto</a>
+        <a class="custom-btn btn-menu" href="MENU-MEXICANA.html">Menú de 3 tiempos</a>
+      </div>
+    </div>
+
+    <div class="w3-third">
+      <img src="COREANA.jpg" class="food-img">
+      <h3>Comida Coreana</h3>
+      <p>Cocina equilibrada con sabores intensos y variedad de fermentados.</p>
+
+      <div class="btn-container">
+        <a class="custom-btn btn-about" href="COREANA.html">Sobre esto</a>
+        <a class="custom-btn btn-menu" href="MENU-COREANA.html">Menú de 3 tiempos</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="w3-row-padding w3-padding-16 w3-center">
+
+    <div class="w3-third">
+      <img src="FRANCESA.jpg" class="food-img">
+      <h3>Comida Francesa</h3>
+      <p>Gastronomía elegante con técnicas finas y postres icónicos.</p>
+
+      <div class="btn-container">
+        <a class="custom-btn btn-about" href="FRANCESA.html">Sobre esto</a>
+        <a class="custom-btn btn-menu" href="MENU-FRANCESA.html">Menú de 3 tiempos</a>
+      </div>
+    </div>
+
+    <div class="w3-third">
+      <img src="CHINA.jpg" class="food-img">
+      <h3>Comida China</h3>
+      <p>Mezcla de sabores dulces, salados y agridulces con gran variedad regional.</p>
+
+      <div class="btn-container">
+        <a class="custom-btn btn-about" href="CHINA.html">Sobre esto</a>
+        <a class="custom-btn btn-menu" href="MENU-CHINA.html">Menú de 3 tiempos</a>
+      </div>
+    </div>
+
+    <div class="w3-third">
+      <img src="ESTADOUNIDENSE.jpg" class="food-img">
+      <h3>Comida Estadounidense</h3>
+      <p>Platos clásicos como hamburguesas, BBQ y comida estilo casero.</p>
+
+      <div class="btn-container">
+        <a class="custom-btn btn-about" href="ESTADOUNIDENSE.html">Sobre esto</a>
+        <a class="custom-btn btn-menu" href="MENU-ESTADOUNIDENSE.html">Menú de 3 tiempos</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>

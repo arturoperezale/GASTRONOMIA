@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comida Coreana</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+
+  <style>
+    body { 
+      font-family: "Karma", sans-serif; 
+      background:#f7f7f7; 
+      margin:0; 
+      padding:0; 
+    }
+
+    .korea-header {
+      background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      padding: 120px 40px;
+      text-align: center;
+
+      border-top: 25px solid black;
+      border-bottom: 25px solid black;
+
+      color: black;
+
+      position: relative;
+    }
+
+    .korea-header h1 { 
+      margin: 0; 
+      font-size: 55px;
+      font-weight: bold;
+      text-shadow: 0 0 6px white;
+    }
+
+    .arrow-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.85);
+      padding: 14px 20px;
+      border-radius: 50%;
+      font-size: 30px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      border: 2px solid black;
+      transition: 0.2s;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .arrow-btn:hover {
+      background: white;
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .arrow-left { left: 20px; }
+    .arrow-right { right: 20px; }
+
+    .main-grid {
+      display: flex;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 18px auto 50px;
+      align-items: flex-start;
+      padding: 0 12px;
+    }
+
+    .left-col { flex: 2; min-width: 280px; }
+    .right-col { flex: 1; min-width: 220px; }
+
+    .main-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+      margin-bottom: 12px;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .section-title {
+      margin: 10px 0 8px;
+      font-size: 18px;
+      color: #C62828;
+    }
+
+    .compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 14px;
+      background: #fff;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+
+    .compact-table thead th {
+      padding: 8px 10px;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    .compact-table tbody td {
+      padding: 6px 8px;
+      font-size: 13px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      vertical-align: top;
+    }
+
+    .compact-table tbody tr:nth-child(even) td { background:#fbfbfb; }
+
+    .img-menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .img-menu a img {
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #C62828;
+      display: block;
+    }
+
+    .description-card {
+      background: #fff;
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+      margin-bottom: 12px;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 900px) {
+      .main-grid { flex-direction: column; }
+      .main-image { height: 220px; }
+      .img-menu a img { height: 90px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="korea-header w3-margin-bottom">
+  
+   <a href="index.html"><span class="w3-left w3-xxlarge">«</span></a>
+  <a href="FRANCESA.html"><span class="w3-right w3-xxlarge">»</span></a>
+
+  <h1>Comida Coreana</h1>
+</div>
+
+<div class="w3-row-padding">
+
+  <div class="main-grid">
+
+    <div class="left-col">
+
+      <img src="COREANA.jpg" alt="Comida Coreana" class="main-image">
+
+      <div>
+        <div class="section-title">Platillos típicos</div>
+
+        <table class="compact-table">
+          <thead style="background:#C62828; color:#fff;">
+            <tr>
+              <th style="width:30%;">Platillo</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bibimbap</td>
+              <td>Arroz mezclado con vegetales, carne, huevo y gochujang.</td>
+            </tr>
+            <tr>
+              <td>Kimchi</td>
+              <td>Repollo fermentado con chile, ajo y especias.</td>
+            </tr>
+            <tr>
+              <td>Bulgogi</td>
+              <td>Carne marinada en salsa de soya, ajo y azúcar.</td>
+            </tr>
+            <tr>
+              <td>Tteokbokki</td>
+              <td>Pasteles de arroz en salsa picante dulce.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div>
+        <div class="section-title">Ingredientes característicos</div>
+
+        <table class="compact-table">
+          <thead style="background:#000; color:#fff;">
+            <tr>
+              <th style="width:30%;">Ingrediente</th>
+              <th>Uso principal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gochujang</td>
+              <td>Pasta picante para sopas, guisos y marinados.</td>
+            </tr>
+            <tr>
+              <td>Salsa de soya</td>
+              <td>Base para marinados y platillos salados.</td>
+            </tr>
+            <tr>
+              <td>Ajo</td>
+              <td>Presente en la mayoría de recetas coreanas.</td>
+            </tr>
+            <tr>
+              <td>Ajonjolí</td>
+              <td>Da sabor y textura a muchos platillos.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div>
+        <div class="section-title">Postres populares</div>
+
+        <table class="compact-table">
+          <thead style="background:#C62828; color:#fff;">
+            <tr>
+              <th style="width:30%;">Postre</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bungeoppang</td>
+              <td>Pan en forma de pez relleno de frijol rojo dulce.</td>
+            </tr>
+            <tr>
+              <td>Hotteok</td>
+              <td>Panqueques rellenos de azúcar morena y nueces.</td>
+            </tr>
+            <tr>
+              <td>Patbingsu</td>
+              <td>Hielo raspado con frutas y frijol dulce.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <aside class="right-col">
+
+      <div class="description-card">
+        <h3 style="margin:0 0 8px; color:#C62828;">Sobre la cocina coreana</h3>
+        <p style="margin:0;">
+          La gastronomía coreana combina sabores dulces, picantes, fermentados y ahumados.
+          El uso de ingredientes como el kimchi, gochujang y la soya es característico
+          en casi todos sus platillos.
+        </p>
+      </div>
+
+      <div class="section-title">Galería</div>
+
+      <div class="img-menu">
+        <a href="korea1.jpg" target="_blank"><img src="COREANA.jpg"></a>
+        <a href="korea2.jpg" target="_blank"><img src="corea2.jpeg"></a>
+        <a href="korea3.jpg" target="_blank"><img src="corea3.jpg"></a>
+        <a href="korea4.jpg" target="_blank"><img src="corea4.jpg"></a>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <script>
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

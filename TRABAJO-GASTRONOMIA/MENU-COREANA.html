@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Menú Coreano - 3 Tiempos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Fuente coreana / serif elegante -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#a31621;    /* rojo coreano */
+      --accent2:#123a6b;   /* azul oscuro (Taeguk) */
+      --paper:#fbf8f2;     /* fondo tipo hanji */
+      --text:#2b2b2b;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Noto Serif KR", "Roboto", serif;
+      background: radial-gradient(circle at 10% 10%, #f2efe7 0%, var(--paper) 30%, #efe8dd 100%);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:30px 16px;
+    }
+
+    .menu-wrap{
+      max-width: 920px;
+      margin: 18px auto;
+      background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(250,248,244,0.98));
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(20,20,20,0.08);
+      overflow: hidden;
+      border: 1px solid rgba(30,30,30,0.03);
+    }
+
+    /* header con textura y símbolo */
+    .menu-header{
+      background-image: url('https://www.transparenttextures.com/patterns/linen.png');
+      padding: 36px 28px;
+      text-align:center;
+      position:relative;
+    }
+
+    .menu-header h1{
+      margin:0;
+      font-size:40px;
+      color:var(--accent2);
+      letter-spacing:2px;
+    }
+    .menu-header p{
+      margin:8px 0 0 0;
+      color:#4b4b4b;
+      font-size:14px;
+    }
+
+    /* taeguk small ornament */
+    .taeguk{
+      position:absolute;
+      right:18px;
+      top:18px;
+      width:58px;
+      height:58px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: radial-gradient(circle at 40% 35%, #fff 0%, rgba(255,255,255,0.6) 40%, transparent 60%);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      border:2px solid rgba(0,0,0,0.04);
+    }
+
+    .taeguk::before{
+      content:"";
+      width:44px;height:44px;border-radius:50%;
+      background: conic-gradient(from 180deg, var(--accent) 0 180deg, var(--accent2) 180deg 360deg);
+      display:block;
+    }
+
+    .container{
+      padding:28px;
+    }
+
+    /* back button */
+    .nav-row{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      margin-bottom:18px;
+    }
+
+    .back-btn, .next-btn{
+      display:inline-block;
+      padding:10px 16px;
+      background:var(--accent);
+      color:#fff;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      box-shadow:0 6px 14px rgba(163,22,33,0.12);
+      transition: transform .15s ease, box-shadow .15s;
+    }
+    .back-btn:hover, .next-btn:hover{ transform: translateY(-2px); box-shadow:0 10px 18px rgba(0,0,0,0.12) }
+
+    /* grid: left column content + right card */
+    .main-grid{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:24px;
+      align-items:start;
+    }
+
+    /* left column */
+    .left-col .hero-img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+      border-radius:10px;
+      display:block;
+      margin-bottom:18px;
+      border:6px solid #fff;
+      box-shadow:0 8px 22px rgba(0,0,0,0.06);
+    }
+
+    .section{
+      margin-bottom:22px;
+      padding-bottom:16px;
+      border-bottom:1px dashed rgba(50,50,50,0.06);
+    }
+
+    .section-title{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:10px;
+    }
+
+    .section-title img{
+      width:56px;height:56px;border-radius:50%;object-fit:cover;border:3px solid var(--accent);
+    }
+
+    .section h2{
+      margin:0;font-size:22px;color:var(--accent2);letter-spacing:1px;
+    }
+
+    .dish{
+      margin-left:6px;
+      margin-bottom:12px;
+    }
+    .dish h3{
+      margin:0;font-size:18px;color:#222;font-weight:700;
+    }
+    .dish p{ margin:6px 0 0 0;color:#525252;font-size:15px;line-height:1.4 }
+
+    /* right column */
+    .right-col{
+      position:relative;
+    }
+
+    .info-card{
+      background: linear-gradient(180deg, #fff, #f9f8f6);
+      padding:18px;border-radius:10px;border:1px solid rgba(0,0,0,0.04);
+      box-shadow:0 8px 20px rgba(0,0,0,0.04);
+    }
+
+    .info-card h3{ margin:0 0 8px 0;color:var(--accent); font-size:18px }
+    .info-card p{ margin:0;color:#444;font-size:14px;line-height:1.45 }
+
+    .gallery{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+      margin-top:12px;
+    }
+    .gallery img{
+      width:100%;height:88px;object-fit:cover;border-radius:8px;border:3px solid #fff;box-shadow:0 6px 16px rgba(0,0,0,0.06);
+    }
+
+    .footer-actions{
+      margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;
+    }
+    .btn-ghost{
+      padding:10px 12px;border-radius:8px;border:1px solid rgba(0,0,0,0.08);background:#fff;font-weight:600;text-decoration:none;color:var(--accent2)
+    }
+
+    /* responsive */
+    @media (max-width:980px){
+      .main-grid{ grid-template-columns: 1fr; }
+      .right-col{ order:2; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu-wrap">
+    <div class="menu-header">
+      <div class="taeguk" aria-hidden="true"></div>
+      <h1>한식 메뉴 — Menú Coreano</h1>
+      <p>Menú tres tiempos • Hansik style</p>
+    </div>
+
+    <div class="container">
+
+      <div class="main-grid">
+
+        <div class="left-col">
+
+          <section class="section">
+            <div class="section-title">
+              <img src="k1.jpg" alt="Kimchi / Entrada">
+              <h2>전채 — Entradas</h2>
+            </div>
+
+            <div class="dish">
+              <h3>Kimchi (김치)</h3>
+              <p>Col fermentada picante, alimento esencial en la mesa coreana. Acompaña cualquier comida.</p>
+            </div>
+
+            <div class="dish">
+              <h3>Mandu (만두) — Empanaditas</h3>
+              <p>Empanadillas rellenas (al vapor o fritas), servidas con salsa de soya y vinagre.</p>
+            </div>
+
+            <div class="dish">
+              <h3>Tteokbokki (떡볶이)</h3>
+              <p>Pasteles de arroz en salsa picante y dulce; típico de comida callejera.</p>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-title">
+              <img src="k2.jpg" alt="Plato fuerte">
+              <h2>메인 — Plato Fuerte</h2>
+            </div>
+
+            <div class="dish">
+              <h3>Bibimbap (비빔밥)</h3>
+              <p>Arroz con verduras, huevo y gochujang; se mezcla en mesa para equilibrar sabores.</p>
+            </div>
+
+            <div class="dish">
+              <h3>Bulgogi (불고기)</h3>
+              <p>Tiras de carne marinada y asada; presenta un sabor dulce-salado característico.</p>
+            </div>
+
+            <div class="dish">
+              <h3>Jjigae (찌개) — Estofado</h3>
+              <p>Estofado caliente (doenjang, kimchi o tofu) ideal para compartir y acompañar con arroz.</p>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-title">
+              <img src="k3.jpg" alt="Postre">
+              <h2>후식 — Postres</h2>
+            </div>
+
+            <div class="dish">
+              <h3>Patbingsu (팥빙수)</h3>
+              <p>Hielo raspado con leche, frutas y pasta de frijol rojo; refrescante y dulce.</p>
+            </div>
+
+            <div class="dish">
+              <h3>Hotteok (호떡)</h3>
+              <p>Pancakes rellenos de azúcar y nueces; fritos y crujientes por fuera.</p>
+            </div>
+          </section>
+
+          
+                 <div class="nav-row">
+        <a class="back-btn" href="index.html">⬅ Regresar</a>
+      </div> 
+
+        </div>
+
+</body>
+</html>
